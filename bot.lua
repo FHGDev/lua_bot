@@ -1,4 +1,5 @@
 local discordia = require "discordia"
+local os = require "os"
 local bot = discordia.Client()
 
 bot:on('ready', function()
