@@ -1,1 +1,1 @@
-worker: sudo luvit bot.lua
+worker: luvit bot.lua
