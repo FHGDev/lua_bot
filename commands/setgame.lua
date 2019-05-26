@@ -8,7 +8,9 @@ return {
     local args = table.slice(mArray, 2)
     
     local resplitted = table.slice(args, 2)
+    local game = table.concat(resplitted, " ")
     
-    bot:setGame({name = args[2], type = resplitted})
+    bot:setGame({name = table.concat(resplitted, " "), type = args[2]})
+    message.channel:send("I set my presence to "..args[2].." "..game..".")
   end
 }
