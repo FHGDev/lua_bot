@@ -7,7 +7,7 @@ bot:on('ready', function()
   print("Logged in as", bot.user.username)
 end)
 
-bot:on('message', function(message)
+bot:on('messageCreate', function(message)
   print(message.content)
 end)
 
