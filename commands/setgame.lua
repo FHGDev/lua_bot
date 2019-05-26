@@ -19,6 +19,6 @@ return {
         return message.channel:send("I set my presence to "..valid_presences[args[1]].." "..game..".");
     end
     
-    if (e) then error(e) end
+    if (e) then print(e) end
   end
 }
