@@ -14,7 +14,7 @@ return {
     print(type.." "..game)
     
     local s, e = pcall(function()
-        bot.setGame({name=game, type=type})
+        bot:setGame({name=game, type=type})
       end)
       
     if (s) then
