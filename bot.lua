@@ -7,4 +7,8 @@ bot:on('ready', function()
   print("Logged in as", bot.user.username)
 end)
 
+bot:on('message', function(message)
+  print(message.content)
+end)
+
 bot:run("Bot "..token)
