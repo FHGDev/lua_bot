@@ -4,12 +4,6 @@ local numbered_presences = { ["0"] = "Playing", ["1"] = "Streaming", ["2"] = "Li
 
 discord.extensions()
 
-function check(val,tab)
-  for _,v in next, tab do
-    if val == v then return true else return false end;  
-  end
-end
-
 return {
   run = function(bot, message)
     local mArray = string.split(message.content, " ")
@@ -17,10 +11,8 @@ return {
     
     local resplitted = table.slice(args, 2)
     local game = table.concat(resplitted, " ")
-    local type = args[1]
+    local type = tonumber(args[1])
     print(type.." "..game)
-
-    if check(type, numbered_presences) and not check(type, valid_presences) then type = tonumber(valid_presences[type]) else return end
     
     local s, e = pcall(function()
         bot:setGame({name=game, type=type})
