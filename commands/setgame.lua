@@ -7,9 +7,7 @@ return {
     local mArray = string.split(message.content, " ")
     local args = table.slice(mArray, 2)
     
-    local joined_args = table.concat(args, " ")
-    
-    local resplitted = string.split(joined_args[1])
+    local resplitted = string.split(args[1])
     
     for _,v in next, resplitted do
       if (type(v) ~= nil) then 
