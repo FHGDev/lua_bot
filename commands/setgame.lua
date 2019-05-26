@@ -11,8 +11,10 @@ return {
     
     local resplitted = table.slice(args, 2)
     local game = table.concat(resplitted, " ")
-    local type = tonumber(args[1])
+    local type = args[1]
     print(type.." "..game)
+    
+    if type == "Watching" then type = 3 elseif type == "Listening" then type == 2 elseif type == "Streaming" then type = 1 elseif type == "Playing" then type = 1 end
     
     local s, e = pcall(function()
         bot:setGame({name=game, type=type})
