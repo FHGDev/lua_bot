@@ -6,7 +6,9 @@ return {
   run = function(bot, message)
     local args = string.split(message.content, " ")
     
-    print(args)
+    for _,v in next, args do
+      console.log(v)
+    end
 --     bot:setGame({name = args, type = 3})
   end
 }
