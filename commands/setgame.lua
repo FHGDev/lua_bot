@@ -7,6 +7,7 @@ return {
     const mArray = message.content:split(" ");
     const args = table.slice(mArray, message.content:len())
     
-    bot:setGame({name = args, type = 3})
+    print(args)
+--     bot:setGame({name = args, type = 3})
   end
 }
