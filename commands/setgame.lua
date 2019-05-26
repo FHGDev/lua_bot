@@ -20,7 +20,7 @@ return {
     local type = args[1]
     print(type.." "..game)
 
-    if check(type, valid_presences) and not check(type, numbered_presences) then type = numbered_presences[type] else return end
+    if check(type, valid_presences) and not check(type, numbered_presences) then type = tonumber(numbered_presences[type]) else return end
     
     local s, e = pcall(function()
         bot:setGame({name=game, type=type})
