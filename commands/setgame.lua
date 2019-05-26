@@ -9,8 +9,6 @@ return {
     
     local joined_args = table.concat(args, " ")
     
-    print(joined_args)
-    
     local resplitted = string.split(joined_args[1])
     
     for _,v in next, resplitted do
