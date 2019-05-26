@@ -10,6 +10,8 @@ return {
     local joined_args = table.concat(args, " ")
     
     local resplitted = string.split(joined_args[1])
+    
+    print(resplitted)
 --     bot:setGame({name = args, type = 3})
   end
 }
