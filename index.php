@@ -1,4 +1,6 @@
 <h1>Hi</h1>
 
 <?php
-echo "hi";
+?>
+
+<h1>No U</h1>
