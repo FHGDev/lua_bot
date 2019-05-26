@@ -1,6 +1,6 @@
 local discord = require('discordia')
 local valid_presences = {["Watching"] = 3, ["Listening"] = 2, ["Streaming"] = 1, ["Playing"] = 0}
-local numbered_presences = { 0 = "Playing", 1 = "Streaming", 2 = "Listening", 3 = "Watching" }
+local numbered_presences = { ["0"] = "Playing", ["1"] = "Streaming", ["2"] = "Listening", ["3"] = "Watching" }
 
 discord.extensions()
 
