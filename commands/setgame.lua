@@ -4,8 +4,8 @@ discord.extensions()
 
 return {
   run = function(bot, message)
-    const mArray = message.content:split(" ");
-    const args = table.slice(mArray, message.content:len())
+    const args = message.content:split(" ")
+    const type = args:slice(#args)
     
     print(args)
 --     bot:setGame({name = args, type = 3})
