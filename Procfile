@@ -1,1 +1,1 @@
-luvit bot.lua
+sudo luvit bot.lua
