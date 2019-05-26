@@ -10,15 +10,15 @@ return {
     
     local resplitted = table.slice(args, 2)
     local game = table.concat(resplitted, " ")
-    local type = args[2]
+    local type = args[1]
     print(type..game)
     
     local s, e = pcall(function()
-        bot.setGame({name=game, type=args[2]})
+        bot.setGame({name=game, type=args[1]})
       end)
       
     if (s) then
-        return message.channel:send("I set my presence to "..valid_presences[args[2]].." "..game..".");
+        return message.channel:send("I set my presence to "..valid_presences[args[1]].." "..game..".");
     end
     
     if (e) then print(e) end
