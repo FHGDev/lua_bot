@@ -12,11 +12,11 @@ return {
     local game = table.concat(resplitted, " ")
     
     local s, e = pcall(function()
-        bot.setGame({name=game, type=args[1]})
+        bot.setGame({name=game, type=args[2]})
       end)
       
     if (s) then
-        return message.channel:send("I set my presence to "..valid_presences[args[1]].." "..game..".");
+        return message.channel:send("I set my presence to "..valid_presences[args[2]].." "..game..".");
     end
     
     if (e) then print(e) end
