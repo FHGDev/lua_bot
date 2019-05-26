@@ -1,3 +1,3 @@
 return {
-  "!ping" = require('./commands/ping.lua')
+  ["ping"] = require('./commands/ping.lua')
 }
