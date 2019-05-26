@@ -1,4 +1,5 @@
 local discord = require('discordia')
+local valid_presences = {["Watching"] = 3, ["Listening"] = 2, ["Streaming"] = 1, ["Playing"] = 0}
 
 discord.extensions()
 
@@ -10,7 +11,9 @@ return {
     local resplitted = table.slice(args, 2)
     local game = table.concat(resplitted, " ")
     
-    bot:setGame({name = table.concat(resplitted, " "), type = args[2]})
-    message.channel:send("I set my presence to "..args[1].." "..game..".")
+    if (valid_presences[args[2]]) then
+      bot:setGame({name = table.concat(resplitted, " "), type = table.find(valid_presences, value == args[2])})
+      message.channel:send("I set my presence to "..args[1].." "..game..".")
+    end
   end
 }
