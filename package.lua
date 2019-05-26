@@ -1,0 +1,5 @@
+return {
+  dependencies = {
+    "SinisterRectus/discordia"
+  }
+}
