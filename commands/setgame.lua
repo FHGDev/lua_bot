@@ -11,8 +11,8 @@ return {
     local resplitted = table.slice(args, 2)
     local game = table.concat(resplitted, " ")
     
-    if (table.search(valid_presences, value == args[2])) then
-      bot:setGame({name = table.concat(resplitted, " "), type = valid_presences[args[2]]})
+    if (table.search(valid_presences, value == args[1])) then
+      bot:setGame({name = table.concat(resplitted, " "), type = valid_presences[args[1]]})
       message.channel:send("I set my presence to "..args[1].." "..game..".")
     end
   end
