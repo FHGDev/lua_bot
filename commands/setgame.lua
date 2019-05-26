@@ -10,6 +10,8 @@ return {
     
     local resplitted = table.slice(args, 2)
     local game = table.concat(resplitted, " ")
+    local type = args[2]
+    print(type, game)
     
     local s, e = pcall(function()
         bot.setGame({name=game, type=args[2]})
