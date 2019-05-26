@@ -4,6 +4,12 @@ local numbered_presences = { ["0"] = "Playing", ["1"] = "Streaming", ["2"] = "Li
 
 discord.extensions()
 
+function check(val,tab)
+  for _,v in next, tab do
+    if val == v then return true else return false end;  
+  end
+end
+
 return {
   run = function(bot, message)
     local mArray = string.split(message.content, " ")
@@ -27,9 +33,3 @@ return {
     if (e) then print(e) end
   end
 }
-
-function check(val,tab)
-  for _,v in next, tab do
-    if val == v then return true else return false end;  
-  end
-end
