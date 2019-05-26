@@ -4,11 +4,10 @@ discord.extensions()
 
 return {
   run = function(bot, message)
-    local args = string.split(message.content, " ")
+    local mArray = string.split(message.content, " ")
+    local args = table.slice(mArray, 1)
     
-    for _,v in next, args do
-      print(v)
-    end
+    print(table.concat(args))
 --     bot:setGame({name = args, type = 3})
   end
 }
