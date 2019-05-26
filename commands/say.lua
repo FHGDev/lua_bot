@@ -1,7 +1,6 @@
 return {
   run = function(bot, message)
-  local args = message.content:sub(4,1000)
-  print(args)
+  local args = message.content:sub(4)
   message:delete()
   
   message.channel:send(args)
