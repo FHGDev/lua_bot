@@ -9,12 +9,6 @@ return {
     
     local resplitted = table.slice(args, 2)
     
-    for _,v in next, resplitted do
-      if (type(v) ~= nil) then 
-        print(v)
-      end
-    end
-    
---     bot:setGame({name = args, type = 3})
+    bot:setGame({name = args[2], type = resplitted})
   end
 }
