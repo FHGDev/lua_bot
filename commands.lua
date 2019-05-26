@@ -1,4 +1,4 @@
 return {
   ["ping"] = require('./commands/ping.lua')
---   ,["say"] = require("./commands/say.lua")
+ ,["say"] = require("./commands/say.lua")
 }
