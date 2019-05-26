@@ -12,7 +12,9 @@ return {
     local resplitted = string.split(joined_args[1])
     
     for _,v in next, resplitted do
-      print(v)
+      if (type(v) ~= nil) then 
+        print(v)
+      end
     end
     
 --     bot:setGame({name = args, type = 3})
