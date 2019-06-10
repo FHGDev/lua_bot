@@ -14,8 +14,8 @@ exports.run = function(bot,message)
     if not success then return message.channel:send(code(runtimeError)) end -- handle runtime errors
 end
 
-return exports
-
 function code(str)
   return string.format('```lua\n%s```', str)
 end
+
+return exports
