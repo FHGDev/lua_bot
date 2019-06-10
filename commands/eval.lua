@@ -7,7 +7,7 @@ exports.run = function(bot,message)
   if not args then message.channel:send("You must give me some code to execute."); end
     if message.author ~= message.client.owner then return end
 
-    local fn, syntaxError = load(arg)
+    local fn, syntaxError = load(args)
     if not fn then return message.channel:send(code(syntaxError)) end
 
     local success, runtimeError = pcall(fn) -- run the code
