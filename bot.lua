@@ -9,8 +9,9 @@ bot:on('ready', function()
 end)
 
 bot:on('messageCreate', function(message)
-  if (bot._commands[message.content:match('^%w+')]) then
-    bot._commands[message.content:match('^%w+')].run(bot, message)
+    local cmd = bot._commands[message.content:match('^%w+')]
+  if (cmd) then
+    cmd.run(bot, message)
   end
 end)
 
